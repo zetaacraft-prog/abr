@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarya Brahmana Ruchulu - Authentic Home Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --yellow: #D4A843;
+            --yellow-dark: #B8922E;
+            --yellow-light: #F5E6C4;
+            --yellow-pale: #FFF8E7;
+            --green: #4A6B3A;
+            --green-dark: #3A5530;
+            --green-light: #6B8F5B;
+            --green-pale: #E8F0E4;
+            --brown: #6B4226;
+            --brown-light: #8B5A3A;
+            --white: #FFFFFF;
+            --bg-light: #FAFAFA;
+            --text-dark: #2C3E50;
+            --text-light: #666666;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+            padding-bottom: 70px;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 2px solid var(--yellow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            padding: 0.4rem 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 0.6rem;
+            position: relative;
+            height: 12vh;
+            min-height: 80px;
+        }
+
+        .logo-container { display: flex; align-items: center; flex-shrink: 0; }
+
+        .logo-img {
+            height: 55px;
+            width: auto;
+            transition: var(--transition);
+            object-fit: contain;
+        }
+
+        .logo-img:hover { transform: scale(1.05); }
+
+        .company-name {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.4rem;
+            line-height: 1;
+            flex: 1;
+            margin-left: 0.2rem;
+        }
+
+        .brand-aarya {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--brown);
+            letter-spacing: 0.3px;
+            position: relative;
+        }
+
+        .brand-aarya::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--yellow);
+            border-radius: 1px;
+        }
+
+        .brand-brahmana {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--brown);
+            letter-spacing: 0.3px;
+            position: relative;
+        }
+
+        .brand-brahmana::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--yellow);
+            border-radius: 1px;
+        }
+
+        .brand-ruchulu {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--green);
+            letter-spacing: 0.3px;
+        }
+
+        .header-contact { display: flex; align-items: center; flex-shrink: 0; }
+
+        .header-contact a {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            background: var(--green);
+            border-radius: 25px;
+            transition: var(--transition);
+        }
+
+        .header-contact a:hover {
+            background: var(--yellow-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 168, 67, 0.4);
+        }
+
+        .nav-bar { background: var(--green); }
+
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: center; }
+
+        .nav-links { display: flex; list-style: none; flex-wrap: wrap; justify-content: center; }
+
+        .nav-links a {
+            display: block;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            padding: 0.7rem 1.2rem;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a i { margin-right: 0.4rem; color: var(--yellow); }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--yellow);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover { background: rgba(255,255,255,0.1); color: var(--yellow); }
+        .nav-links a:hover::after { width: 60%; }
+        .nav-links a.active { background: rgba(255,255,255,0.15); color: var(--yellow); }
+        .nav-links a.active::after { width: 60%; }
+
+        .mobile-bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border-top: 1px solid var(--yellow-light);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            z-index: 997;
+            padding: 0.3rem 0 0.5rem;
+        }
+
+        .mobile-nav-list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .mobile-nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-light);
+            padding: 0.2rem 0;
+            transition: var(--transition);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .mobile-nav-item i {
+            font-size: 1rem;
+            margin-bottom: 0.15rem;
+            transition: var(--transition);
+            color: var(--text-light);
+        }
+
+        .mobile-nav-item span {
+            font-size: 0.6rem;
+            font-weight: 500;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .mobile-nav-item.active { color: var(--green); }
+        .mobile-nav-item.active i { color: var(--green); transform: scale(1.1); }
+        .mobile-nav-item.active span { color: var(--green); font-weight: 600; }
+
+        .mobile-nav-item.active::before {
+            content: '';
+            position: absolute;
+            top: -0.3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 2px;
+            background: var(--yellow);
+            border-radius: 0 0 2px 2px;
+        }
+
+        .mobile-nav-item:active { transform: scale(0.95); }
+
+        .hero {
+            background: 
+                url('https://lh3.googleusercontent.com/d/1VAs96xW-YPx23e1k1x4dHTO48kw-fl5J=w1920') center/cover no-repeat,
+                linear-gradient(135deg, var(--yellow-pale) 0%, var(--green-pale) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: calc(100vh - 12vh);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            color: var(--white);
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            font-weight: 500;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--white);
+            color: var(--green);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero-btn:hover {
+            background: var(--yellow);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .comet-dock {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 998;
+            pointer-events: none;
+        }
+
+        .comet-popup {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            pointer-events: auto;
+            opacity: 0;
+            transform: translate(-250px, 180px) rotate(-35deg) scale(0.4);
+            animation: cometFlyIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .comet-popup.exiting { animation: cometFlyOut 0.7s ease-in forwards; }
+
+        @keyframes cometFlyIn {
+            0% { opacity: 0; transform: translate(-250px, 180px) rotate(-35deg) scale(0.4); }
+            50% { opacity: 1; }
+            75% { transform: translate(10px, -10px) rotate(-5deg) scale(1.08); }
+            100% { opacity: 1; transform: translate(0, 0) rotate(-10deg) scale(1); }
+        }
+
+        @keyframes cometFlyOut {
+            0% { opacity: 1; transform: translate(0, 0) rotate(-10deg) scale(1); }
+            100% { opacity: 0; transform: translate(-300px, 200px) rotate(-40deg) scale(0.2); }
+        }
+
+        .comet-tail-container {
+            position: absolute; left: -20px; top: 180px; width: 280px; height: 140px;
+            z-index: 1; pointer-events: none; overflow: visible;
+        }
+        .comet-tail-container svg { width: 100%; height: 100%; overflow: visible; }
+
+        .tail-main-body { fill: url(#tailBodyGrad); opacity: 0.95; }
+        .tail-shimmer { fill: url(#tailShimmerGrad); opacity: 0.6; }
+        .tail-edge-glow { fill: none; stroke: url(#tailEdgeGrad); stroke-width: 2; opacity: 0.7; filter: blur(1px); }
+
+        .tail-sparkle { animation: sparkleFloat 2s ease-in-out infinite; }
+        .tail-sparkle:nth-child(2) { animation-delay: 0.3s; }
+        .tail-sparkle:nth-child(3) { animation-delay: 0.6s; }
+        .tail-sparkle:nth-child(4) { animation-delay: 0.9s; }
+        .tail-sparkle:nth-child(5) { animation-delay: 1.2s; }
+        .tail-sparkle:nth-child(6) { animation-delay: 1.5s; }
+        .tail-sparkle:nth-child(7) { animation-delay: 1.8s; }
+
+        @keyframes sparkleFloat {
+            0%, 100% { opacity: 0.3; transform: translateY(0) scale(0.8); }
+            50% { opacity: 1; transform: translateY(-3px) scale(1.2); }
+        }
+
+        .comet-star-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
+        .comet-star-container svg { width: 100%; height: 100%; overflow: visible; }
+
+        .star-outer-glow {
+            filter: drop-shadow(0 0 20px rgba(139, 26, 43, 0.6)) drop-shadow(0 0 40px rgba(220, 53, 69, 0.3));
+            animation: starOuterPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes starOuterPulse {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(139, 26, 43, 0.5)) drop-shadow(0 0 30px rgba(220, 53, 69, 0.2)); }
+            50% { filter: drop-shadow(0 0 25px rgba(139, 26, 43, 0.8)) drop-shadow(0 0 50px rgba(220, 53, 69, 0.4)); }
+        }
+
+        .star-body-shape { animation: starInnerShine 3s ease-in-out infinite; }
+        @keyframes starInnerShine { 0%, 100% { opacity: 0.95; } 50% { opacity: 1; } }
+
+        .sparkle-dot { animation: sparkleTwinkle 1.5s ease-in-out infinite; }
+        .sparkle-dot:nth-child(2) { animation-delay: 0.3s; }
+        .sparkle-dot:nth-child(3) { animation-delay: 0.6s; }
+        .sparkle-dot:nth-child(4) { animation-delay: 0.9s; }
+        .sparkle-dot:nth-child(5) { animation-delay: 1.2s; }
+
+        @keyframes sparkleTwinkle {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .comet-text-overlay {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            z-index: 3; text-align: center; width: 55%; pointer-events: none;
+        }
+
+        .comet-text-title {
+            font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--white);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 0 10px rgba(139, 26, 43, 0.5); margin-bottom: 0.2rem; line-height: 1.2; letter-spacing: 0.3px;
+        }
+
+        .comet-text-desc {
+            font-size: 0.6rem; color: var(--yellow-light); text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+            line-height: 1.3; margin-bottom: 0.4rem; font-weight: 500;
+        }
+
+        .comet-text-badge {
+            display: inline-block; background: linear-gradient(135deg, #ffffff 0%, #F5E6C4 100%);
+            color: #8B1A2B; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.55rem; font-weight: 700;
+            letter-spacing: 1px; box-shadow: 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8);
+            border: 1px solid rgba(212, 168, 67, 0.5);
+        }
+
+        .comet-close {
+            position: absolute; top: 12px; right: 12px; width: 24px; height: 24px;
+            background: rgba(255,255,255,0.95); color: var(--green); border: 2px solid var(--yellow);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; font-weight: 700; cursor: pointer; pointer-events: auto;
+            transition: var(--transition); z-index: 5; line-height: 1; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .comet-close:hover {
+            background: #e74c3c; color: var(--white); border-color: #e74c3c; transform: scale(1.15) rotate(90deg);
+        }
+
+        .category-section { padding: 4rem 2rem; max-width: 1400px; margin: 0 auto; }
+        .category-section.alt-bg { background: var(--bg-light); max-width: 100%; padding: 4rem 2rem; }
+        .category-section.alt-bg .category-inner { max-width: 1400px; margin: 0 auto; }
+
+        .category-title { text-align: center; margin-bottom: 3rem; }
+        .category-title h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--green); margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.8rem; }
+        .category-title h2 i { color: var(--yellow); font-size: 1.5rem; }
+        .category-title p { color: var(--text-light); font-size: 1rem; }
+        .title-divider { width: 60px; height: 3px; background: var(--yellow); margin: 1rem auto; border-radius: 2px; }
+
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 1.5rem; 
+            justify-content: center;
+            perspective: 1000px; 
+            max-width: 1280px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .product-card {
+            width: 100%;
+            height: 440px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            background: var(--white);
+            justify-self: center;
+        }
+
+        .product-card:hover { transform: rotateY(180deg); }
+        .product-card.flipped { transform: rotateY(180deg); }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--white);
+        }
+
+        .card-front { display: flex; flex-direction: column; }
+        .card-back { transform: rotateY(180deg); padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; background: var(--white); border: 2px solid var(--yellow); }
+
+        .product-image { 
+            width: 100%; 
+            height: 260px; 
+            object-fit: cover; 
+            flex-shrink: 0;
+        }
+
+        .top-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(135deg, var(--yellow), var(--yellow-dark));
+            color: var(--white);
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(212, 168, 67, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        .top-badge i { font-size: 0.6rem; }
+
+        .product-info { 
+            display: flex; 
+            align-items: center;
+            padding: 12px 12px 8px;
+            flex-shrink: 0;
+        }
+
+        .product-header { 
+            display: flex; 
+            align-items: center; 
+            gap: 0.5rem; 
+            width: 100%;
+        }
+
+        .veg-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .veg-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-name { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            color: var(--text-dark);
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            padding: 0 8px 8px;
+            box-sizing: border-box;
+        }
+
+        .price-grid .price-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #f0f7ec 0%, #e6f0e0 100%);
+            border: 1.5px solid var(--green);
+            border-radius: 10px;
+            padding: 8px 4px;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-grid .price-item:hover {
+            background: linear-gradient(145deg, #e6f0e0 0%, #d8e8d0 100%);
+            border-color: var(--green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 107, 58, 0.2);
+        }
+
+        .price-item .leaf-icon {
+            width: 14px;
+            height: 14px;
+            margin-bottom: 2px;
+            flex-shrink: 0;
+        }
+
+        .price-item .leaf-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .price-item .price-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--green-dark);
+            line-height: 1.1;
+            margin-bottom: 2px;
+        }
+
+        .price-item .price-amount .rupee-symbol {
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .price-item .variation-name {
+            font-size: 0.6rem;
+            font-weight: 500;
+            color: var(--green);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        .price-list-mobile {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0 8px 8px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--green-light) transparent;
+        }
+
+        .price-list-mobile::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .price-list-mobile::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .price-list-mobile::-webkit-scrollbar-thumb {
+            background: var(--green-light);
+            border-radius: 4px;
+        }
+
+        .price-list-mobile .price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(145deg, #f0f7ec 0%, #e6f0e0 100%);
+            border: 1.2px solid var(--green);
+            border-radius: 8px;
+            padding: 6px 8px;
+            flex-shrink: 0;
+            min-height: 34px;
+            transition: var(--transition);
+        }
+
+        .price-list-mobile .price-row:hover {
+            background: linear-gradient(145deg, #e6f0e0 0%, #d8e8d0 100%);
+        }
+
+        .price-row .row-left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .price-row .row-leaf {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+        }
+
+        .price-row .row-leaf svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .price-row .row-name {
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--green);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .price-row .row-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--green-dark);
+            margin-right: 8px;
+            white-space: nowrap;
+        }
+
+        .price-row .row-price .rupee-symbol {
+            font-size: 0.62rem;
+        }
+
+        .price-row .add-btn {
+            width: 24px;
+            height: 24px;
+            background: var(--green);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .price-row .add-btn:hover {
+            background: var(--green-dark);
+            transform: scale(1.1);
+        }
+
+        .back-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--green); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--yellow-light); }
+        .description { color: var(--text-light); line-height: 1.6; margin-bottom: 1rem; font-size: 0.9rem; }
+        .variations { margin-bottom: 1rem; }
+        .variations h4 { color: var(--brown); margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 600; }
+
+        .variation-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .variation-tag {
+            background: var(--yellow-pale); padding: 0.25rem 0.7rem; border-radius: 15px;
+            font-size: 0.8rem; color: var(--brown); border: 1px solid var(--yellow-light); transition: var(--transition);
+        }
+        .variation-tag:hover { background: var(--yellow); color: var(--white); }
+
+        .order-button {
+            width: 100%; padding: 0.8rem; background: #25d366; color: var(--white); border: none;
+            border-radius: 10px; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: var(--transition); text-decoration: none;
+        }
+        .order-button:hover { background: #128c7e; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
+
+        .whatsapp-float {
+            position: fixed; bottom: 85px; right: 25px; width: 55px; height: 55px;
+            background: #25d366; color: var(--white); border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); cursor: pointer; z-index: 999;
+            transition: var(--transition); text-decoration: none; animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6); }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        footer {
+            background: var(--green);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .footer-logo {
+            flex-shrink: 0;
+            background: var(--white);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer-text { flex: 1; }
+
+        .footer-brand {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--yellow);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0.4rem 0;
+        }
+
+        .footer-divider {
+            width: 100%;
+            max-width: 1200px;
+            margin: 1.5rem auto 0;
+            height: 1px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 1200px) {
+            .product-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 900px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            header { position: relative; }
+
+            .header-top { 
+                height: 12vh;
+                min-height: 70px;
+                flex-direction: row;
+                padding: 0.3rem 0.6rem;
+                justify-content: flex-start;
+                align-items: center;
+                background: var(--white);
+                max-width: 100%;
+                gap: 0.4rem;
+            }
+
+            .logo-container { 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                flex: 0;
+            }
+
+            .logo-img {
+                height: 7vh;
+                max-height: 50px;
+                width: auto;
+                object-fit: contain;
+            }
+
+            .company-name { 
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                justify-content: flex-start;
+                line-height: 1;
+                flex: 0;
+                gap: 0.2rem;
+                margin-left: 0.1rem;
+            }
+
+            .brand-aarya, .brand-brahmana {
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: var(--brown);
+                letter-spacing: 0.2px;
+            }
+
+            .brand-aarya::after, .brand-brahmana::after {
+                bottom: -2px;
+                height: 1px;
+            }
+
+            .brand-ruchulu {
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: var(--green);
+                letter-spacing: 0.2px;
+            }
+
+            .header-contact { display: none; }
+            .nav-bar { display: none; }
+            .mobile-bottom-nav { display: block; }
+            
+            .hero {
+                min-height: calc(100vh - 12vh);
+                padding: 1.5rem 1rem;
+            }
+
+            .hero-content { 
+                max-width: 100%;
+                padding: 1rem 0.5rem;
+            }
+
+            .hero-content h2 { 
+                font-size: 1.8rem;
+                color: var(--white);
+                text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                margin-bottom: 0.8rem;
+                line-height: 1.3;
+            }
+
+            .hero-content p { 
+                font-size: 0.95rem;
+                color: var(--white);
+                text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+                margin-bottom: 1.5rem;
+                line-height: 1.5;
+            }
+
+            .hero-btn {
+                background: var(--white);
+                color: var(--green);
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .product-grid { 
+                grid-template-columns: 1fr; 
+                max-width: 340px; 
+                margin: 0 auto; 
+            }
+
+            .product-card {
+                max-width: 340px;
+                height: 440px;
+            }
+
+            .price-grid { display: none; }
+            .price-list-mobile { display: flex; }
+
+            .comet-dock { bottom: 80px; left: 15px; }
+            .comet-popup { width: 220px; height: 220px; }
+            .comet-tail-container { width: 220px; height: 110px; left: -15px; top: 150px; }
+            .comet-text-title { font-size: 0.75rem; }
+            .comet-text-desc { font-size: 0.5rem; }
+            .comet-text-badge { font-size: 0.45rem; padding: 0.15rem 0.4rem; }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .footer-logo img { height: 60px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 1rem 0.8rem; }
+            .hero-content h2 { font-size: 1.5rem; }
+            .hero-content p { font-size: 0.85rem; }
+            .brand-aarya, .brand-brahmana, .brand-ruchulu { font-size: 1.1rem; }
+        }
+
+        .loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--white); display: flex; justify-content: center; align-items: center;
+            z-index: 9999; transition: opacity 0.5s ease;
+        }
+        .loader.hidden { opacity: 0; pointer-events: none; }
+        .loader-content { text-align: center; }
+        .loader-spinner {
+            width: 40px; height: 40px; border: 3px solid var(--yellow-light);
+            border-top: 3px solid var(--green); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .loader-content p { font-family: 'Dancing Script', cursive; color: var(--green); font-weight: 600; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <linearGradient id="tailBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#5a0f1a;stop-opacity:0.1" />
+                <stop offset="30%" style="stop-color:#8B1A2B;stop-opacity:0.6" />
+                <stop offset="70%" style="stop-color:#dc3545;stop-opacity:0.9" />
+                <stop offset="100%" style="stop-color:#ff6b7a;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="tailShimmerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0" />
+                <stop offset="50%" style="stop-color:#ff9a9e;stop-opacity:0.5" />
+                <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
+            </linearGradient>
+            <linearGradient id="tailEdgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#5a0f1a;stop-opacity:0" />
+                <stop offset="100%" style="stop-color:#D4A843;stop-opacity:0.8" />
+            </linearGradient>
+            <radialGradient id="starBodyGrad" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" style="stop-color:#ff9a9e" />
+                <stop offset="25%" style="stop-color:#ff6b7a" />
+                <stop offset="55%" style="stop-color:#dc3545" />
+                <stop offset="85%" style="stop-color:#8B1A2B" />
+                <stop offset="100%" style="stop-color:#5a0f1a" />
+            </radialGradient>
+            <radialGradient id="starHighlightGrad" cx="30%" cy="25%" r="50%">
+                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
+                <stop offset="40%" style="stop-color:#ffffff;stop-opacity:0.2" />
+                <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+            </radialGradient>
+            <linearGradient id="starEdgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#F5E6C4" />
+                <stop offset="50%" style="stop-color:#D4A843" />
+                <stop offset="100%" style="stop-color:#8B1A2B" />
+            </linearGradient>
+            <radialGradient id="sparkleGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#F5E6C4;stop-opacity:0" />
+            </radialGradient>
+            <radialGradient id="tailSparkleGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#ff9a9e;stop-opacity:0.8" />
+                <stop offset="100%" style="stop-color:#dc3545;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+    </svg>
+
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>aarya brahmana ruchulu</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="https://lh3.googleusercontent.com/d/1R80dx1FbkKw1fWAZpszGw5_0_wENSWp1=w400" 
+                     alt="Aarya Brahmana Ruchulu" 
+                     class="logo-img"
+                     onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 80\'><circle cx=\'35\' cy=\'35\' r=\'28\' fill=\'%23D4A843\' opacity=\'0.9\'/><circle cx=\'35\' cy=\'35\' r=\'25\' fill=\'%23F5E6C4\'/><text x=\'75\' y=\'45\' font-family=\'serif\' font-size=\'18\' font-weight=\'700\' fill=\'%234A6B3A\'>aarya</text><text x=\'75\' y=\'65\' font-family=\'serif\' font-size=\'12\' fill=\'%236B4226\'>brahmana ruchulu</text></svg>'">
+            </div>
+            <div class="company-name">
+                <span class="brand-aarya">aarya</span>
+                <span class="brand-brahmana">brahmana</span>
+                <span class="brand-ruchulu">ruchulu</span>
+            </div>
+            <div class="header-contact">
+                <a href="https://wa.me/918519910385?text=Hi!%20%F0%9F%91%8B%20I%E2%80%99m%20interested%20in%20your%20currently%20available%20products.%20Could%20you%20please%20share%20more%20details%3F" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active" data-section="hero"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#bestsellers" data-section="bestsellers"><i class="fas fa-star"></i> Best Sellers</a></li>
+                    <li><a href="#spicypowders" data-section="spicypowders"><i class="fas fa-pepper-hot"></i> Spicy Powders</a></li>
+                    <li><a href="#instantrice" data-section="instantrice"><i class="fas fa-utensils"></i> Rice Mix</a></li>
+                    <li><a href="#masalapowders" data-section="masalapowders"><i class="fas fa-mortar-pestle"></i> Masala Powders</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="mobile-bottom-nav">
+        <ul class="mobile-nav-list">
+            <li><a href="#hero" class="mobile-nav-item active" data-section="hero"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="#bestsellers" class="mobile-nav-item" data-section="bestsellers"><i class="fas fa-star"></i><span>Best Sellers</span></a></li>
+            <li><a href="#spicypowders" class="mobile-nav-item" data-section="spicypowders"><i class="fas fa-pepper-hot"></i><span>Spicy</span></a></li>
+            <li><a href="#instantrice" class="mobile-nav-item" data-section="instantrice"><i class="fas fa-utensils"></i><span>Rice Mix</span></a></li>
+            <li><a href="#masalapowders" class="mobile-nav-item" data-section="masalapowders"><i class="fas fa-mortar-pestle"></i><span>Masala</span></a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-content fade-in">
+            <h2>Taste of Home, Delivered Fresh</h2>
+            <p>Enjoy authentic, hygienic, and delicious home-cooked meals made with love and traditional Brahmana recipes. No preservatives, no shortcuts — just pure homemade goodness.</p>
+            <a href="#bestsellers" class="hero-btn">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section class="category-section alt-bg" id="bestsellers">
+        <div class="category-inner">
+            <div class="category-title fade-in">
+                <h2><i class="fas fa-star"></i> Best Sellers</h2>
+                <div class="title-divider"></div>
+                <p>Our most popular products loved by customers</p>
+            </div>
+            <div class="product-grid" id="bestsellers-grid"></div>
+        </div>
+    </section>
+
+    <section class="category-section" id="spicypowders">
+        <div class="category-title fade-in">
+            <h2><i class="fas fa-pepper-hot"></i> Spicy Powders</h2>
+            <div class="title-divider"></div>
+            <p>Authentic homemade spice blends</p>
+        </div>
+        <div class="product-grid" id="spicypowders-grid"></div>
+    </section>
+
+    <section class="category-section alt-bg" id="instantrice">
+        <div class="category-inner">
+            <div class="category-title fade-in">
+                <h2><i class="fas fa-utensils"></i> Instant Rice Mix</h2>
+                <div class="title-divider"></div>
+                <p>Quick and easy rice mixes for busy days</p>
+            </div>
+            <div class="product-grid" id="instantrice-grid"></div>
+        </div>
+    </section>
+
+    <section class="category-section" id="masalapowders">
+        <div class="category-title fade-in">
+            <h2><i class="fas fa-mortar-pestle"></i> Masala Powders</h2>
+            <div class="title-divider"></div>
+            <p>Premium masala blends for perfect cooking</p>
+        </div>
+        <div class="product-grid" id="masalapowders-grid"></div>
+    </section>
+
+    <div class="comet-dock" id="cometDock"></div>
+
+    <a href="https://wa.me/918519910385?text=Hi!%20%F0%9F%91%8B%20I%E2%80%99m%20interested%20in%20your%20currently%20available%20products.%20Could%20you%20please%20share%20more%20details%3F" 
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://lh3.googleusercontent.com/d/1R80dx1FbkKw1fWAZpszGw5_0_wENSWp1=w400" 
+                     alt="Aarya Brahmana Ruchulu Logo"
+                     onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'width:80px;height:80px;background:var(--yellow);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:Dancing Script,cursive;font-size:2rem;color:var(--green);font-weight:700;\'>AB</div>'">
+            </div>
+            <div class="footer-text">
+                <div class="footer-brand">aarya brahmana ruchulu</div>
+                <p>&copy; 2024 Aarya Brahmana Ruchulu. All rights reserved.</p>
+                <p>Made with ❤️ for food lovers</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.95;">
+                    <i class="fab fa-whatsapp"></i> +91 85199 10385
+                </p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+    </footer>
+
+    <script>
+        const whatsappNumber = "918519910385";
+
+        const leafSvg = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#4A6B3A"/></svg>`;
+
+        const spicyRicePricing = [
+            { name: "100 gms", price: "₹100" },
+            { name: "200 gms", price: "₹200" },
+            { name: "250 gms", price: "₹250" },
+            { name: "500 gms", price: "₹500" },
+            { name: "1 kg", price: "₹1000" }
+        ];
+
+        const masalaPricing = [
+            { name: "100 gms", price: "₹90" },
+            { name: "200 gms", price: "₹180" },
+            { name: "250 gms", price: "₹220" },
+            { name: "500 gms", price: "₹350" },
+            { name: "1 kg", price: "₹700" }
+        ];
+
+        // Fallback images for each product
+        const fallbackImages = {
+            'Idly Karam Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Karivepaku Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Kothimeera Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Vellulli Karam Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Munagaaku Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Chutnee Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Kandi Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Pudeena Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Pulihora Mix': 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400',
+            'Rasam Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
+            'Sambar Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400'
+        };
+
+        const imgPath = (folder, num) => `images/${folder}/${num}.jpg`;
+
+        const allSpicyProducts = [
+            { name: "Idly Karam Podi", image: imgPath('spicy', 1), description: "Spicy idli chutney powder (gunpowder) made with red chilies, garlic, and lentils. Perfect with hot idlis and ghee.", variations: [...spicyRicePricing], isVeg: true },
+            { name: "Karivepaku Podi", image: imgPath('spicy', 2), description: "Curry leaves powder — a healthy, aromatic spice blend made from dried curry leaves, chilies, and lentils.", variations: [...spicyRicePricing], isVeg: true },
+            { name: "Kothimeera Podi", image: imgPath('spicy', 3), description: "Fresh coriander (cilantro) powder with chilies and spices. Adds a burst of flavor to rice and snacks.", variations: [...spicyRicePricing], isVeg: true },
+            { name: "Vellulli Karam Podi", image: imgPath('spicy', 4), description: "Garlic chili powder — a fiery blend of dried garlic and red chilies. Great with rice, idli, and dosa.", variations: [...spicyRicePricing], isVeg: true },
+            { name: "Munagaaku Podi", image: imgPath('spicy', 5), description: "Drumstick leaves (moringa) powder — a nutritious spice blend rich in vitamins and minerals.", variations: [...spicyRicePricing], isVeg: true },
+            { name: "Chutnee Podi", image: imgPath('spicy', 6), description: "Traditional chutney powder made with peanuts, chilies, and spices. Perfect accompaniment for rice and tiffin.", variations: [...spicyRicePricing], isVeg: true },
+            { name: "Kandi Podi", image: imgPath('spicy', 7), description: "Bengal gram (chana dal) powder — a protein-rich spice blend with chilies and tempering spices.", variations: [...spicyRicePricing], isVeg: true },
+            { name: "Pudeena Podi", image: imgPath('spicy', 8), description: "Mint leaves powder with chilies and spices. Refreshing and flavorful — great with rice and curd.", variations: [...spicyRicePricing], isVeg: true }
+        ];
+
+        const allRiceProducts = [
+            { name: "Pulihora Mix", image: imgPath('rice', 1), description: "Instant tamarind rice mix with traditional spices. Just add cooked rice and oil — ready in 5 minutes!", variations: [...spicyRicePricing], isVeg: true }
+        ];
+
+        const allMasalaProducts = [
+            { name: "Rasam Podi", image: imgPath('masala', 1), description: "Authentic homemade rasam powder with aromatic spices, perfect for tangy rasam soup.", variations: [...masalaPricing], isVeg: true },
+            { name: "Sambar Podi", image: imgPath('masala', 2), description: "Traditional South Indian sambar powder blend with lentils and spices for flavorful sambar.", variations: [...masalaPricing], isVeg: true }
+        ];
+
+        const bestSellerNames = ["Rasam Podi", "Sambar Podi", "Pulihora Mix", "Idly Karam Podi"];
+
+        const bestSellersProducts = [
+            { ...allMasalaProducts.find(p => p.name === "Rasam Podi"), bestseller: true },
+            { ...allMasalaProducts.find(p => p.name === "Sambar Podi"), bestseller: true },
+            { ...allRiceProducts.find(p => p.name === "Pulihora Mix"), bestseller: true },
+            { ...allSpicyProducts.find(p => p.name === "Idly Karam Podi"), bestseller: true }
+        ];
+
+        const products = {
+            bestsellers: bestSellersProducts,
+            spicypowders: allSpicyProducts,
+            instantrice: allRiceProducts,
+            masalapowders: allMasalaProducts
+        };
+
+        const cometDock = document.getElementById('cometDock');
+        let cometTimer = null;
+        let dismissTimer = null;
+        let isCometShowing = false;
+        let isPageVisible = true;
+
+        const INITIAL_DELAY = 5000;
+        const REPEAT_INTERVAL = 30000;
+        const DISPLAY_DURATION = 10000;
+
+        const discountMessages = [
+            { title: "✨ Special Offer", text: "Sambar Podi, Rasam Podi & more!", badge: "20% OFF" },
+            { title: "⭐ Best Sellers", text: "Pulihora Mix, Idly Karam Podi & more!", badge: "LIMITED" },
+            { title: "🔥 Hot Deal", text: "Fresh spices at amazing prices!", badge: "SAVE BIG" },
+            { title: " Home Fresh", text: "Daily fresh meals delivered hot!", badge: "ORDER NOW" }
+        ];
+        let messageIndex = 0;
+
+        function forceRemoveAllComets() {
+            const allComets = document.querySelectorAll('.comet-popup');
+            allComets.forEach(comet => { if (comet.parentNode) comet.remove(); });
+            isCometShowing = false;
+        }
+
+        function showComet() {
+            forceRemoveAllComets();
+            if (dismissTimer) { clearTimeout(dismissTimer); dismissTimer = null; }
+            if (!isPageVisible) return;
+
+            const popup = document.createElement('div');
+            popup.className = 'comet-popup';
+            const msg = discountMessages[messageIndex % discountMessages.length];
+            messageIndex++;
+
+            popup.innerHTML = `
+                <div class="comet-tail-container">
+                    <svg viewBox="0 0 280 140" preserveAspectRatio="none">
+                        <path class="tail-main-body" d="M 20 120 Q 80 130, 140 100 Q 200 70, 270 30 Q 200 80, 140 110 Q 80 140, 20 130 Z"/>
+                        <path class="tail-shimmer" d="M 30 122 Q 90 128, 145 102 Q 200 75, 265 35 Q 200 78, 145 105 Q 90 132, 30 125 Z"/>
+                        <path class="tail-edge-glow" d="M 25 125 Q 85 132, 142 105 Q 202 72, 268 32"/>
+                        <circle class="tail-sparkle" cx="50" cy="125" r="4" fill="url(#tailSparkleGrad)"/>
+                        <circle class="tail-sparkle" cx="90" cy="118" r="3" fill="url(#tailSparkleGrad)"/>
+                        <circle class="tail-sparkle" cx="130" cy="105" r="3.5" fill="url(#tailSparkleGrad)"/>
+                        <circle class="tail-sparkle" cx="170" cy="88" r="2.5" fill="url(#tailSparkleGrad)"/>
+                        <circle class="tail-sparkle" cx="210" cy="68" r="3" fill="url(#tailSparkleGrad)"/>
+                        <circle class="tail-sparkle" cx="245" cy="48" r="2" fill="url(#tailSparkleGrad)"/>
+                        <circle class="tail-sparkle" cx="265" cy="35" r="1.5" fill="url(#tailSparkleGrad)"/>
+                    </svg>
+                </div>
+                <div class="comet-star-container">
+                    <svg viewBox="0 0 260 260">
+                        <g class="star-outer-glow">
+                            <polygon class="star-body-shape" points="130,15 158,95 245,95 175,145 200,230 130,180 60,230 85,145 15,95 102,95" fill="url(#starBodyGrad)" stroke="url(#starEdgeGrad)" stroke-width="4" stroke-linejoin="round"/>
+                            <polygon points="130,30 152,95 230,95 170,140 192,215 130,172 68,215 90,140 30,95 108,95" fill="url(#starHighlightGrad)" opacity="0.7"/>
+                            <ellipse cx="115" cy="100" rx="35" ry="30" fill="url(#starHighlightGrad)" opacity="0.5"/>
+                        </g>
+                        <circle class="sparkle-dot" cx="40" cy="50" r="3" fill="url(#sparkleGrad)"/>
+                        <circle class="sparkle-dot" cx="220" cy="60" r="2.5" fill="url(#sparkleGrad)"/>
+                        <circle class="sparkle-dot" cx="200" cy="220" r="2" fill="url(#sparkleGrad)"/>
+                        <circle class="sparkle-dot" cx="50" cy="210" r="2.5" fill="url(#sparkleGrad)"/>
+                        <circle class="sparkle-dot" cx="130" cy="5" r="2" fill="url(#sparkleGrad)"/>
+                    </svg>
+                </div>
+                <div class="comet-text-overlay">
+                    <div class="comet-text-title">${msg.title}</div>
+                    <div class="comet-text-desc">${msg.text}</div>
+                    <div class="comet-text-badge">${msg.badge}</div>
+                </div>
+                <div class="comet-close" onclick="dismissComet()">✕</div>
+            `;
+
+            cometDock.appendChild(popup);
+            isCometShowing = true;
+            dismissTimer = setTimeout(() => { dismissComet(); }, DISPLAY_DURATION);
+        }
+
+        function dismissComet() {
+            if (dismissTimer) { clearTimeout(dismissTimer); dismissTimer = null; }
+            forceRemoveAllComets();
+        }
+
+        function scheduleNextComet() {
+            if (cometTimer) { clearTimeout(cometTimer); cometTimer = null; }
+            cometTimer = setTimeout(() => {
+                if (isPageVisible && !isCometShowing) { showComet(); scheduleNextComet(); }
+                else { scheduleNextComet(); }
+            }, REPEAT_INTERVAL);
+        }
+
+        function initCometSystem() {
+            setTimeout(() => {
+                if (isPageVisible && !isCometShowing) { showComet(); scheduleNextComet(); }
+            }, INITIAL_DELAY);
+        }
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                isPageVisible = false;
+                if (cometTimer) { clearTimeout(cometTimer); cometTimer = null; }
+                dismissComet();
+            } else {
+                isPageVisible = true;
+                forceRemoveAllComets();
+                setTimeout(() => { if (!isCometShowing) { showComet(); scheduleNextComet(); } }, 1000);
+            }
+        });
+
+        function handleImageError(img, productName) {
+            const fallback = fallbackImages[productName] || 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400';
+            if (img.src !== fallback) {
+                img.src = fallback;
+            }
+        }
+
+        function generateProductCards(category, containerId) {
+            const container = document.getElementById(containerId);
+            const categoryProducts = products[category];
+            if (!categoryProducts) return;
+            categoryProducts.forEach((product, index) => {
+                const card = document.createElement('div');
+                card.className = 'product-card fade-in';
+                card.style.transitionDelay = `${index * 0.05}s`;
+
+                const priceGridHtml = product.variations.map((v, i) => {
+                    const priceNum = v.price.replace(/[^\d]/g, '');
+                    return `<div class="price-item" title="${v.name} - ${v.price}">
+                        <div class="leaf-icon">${leafSvg}</div>
+                        <span class="price-amount"><span class="rupee-symbol">₹</span>${priceNum}</span>
+                        <span class="variation-name">${v.name}</span>
+                    </div>`;
+                }).join('');
+
+                const priceListHtml = product.variations.map((v, i) => {
+                    const priceNum = v.price.replace(/[^\d]/g, '');
+                    return `<div class="price-row">
+                        <div class="row-left">
+                            <div class="row-leaf">${leafSvg}</div>
+                            <span class="row-name">${v.name}</span>
+                        </div>
+                        <span class="row-price"><span class="rupee-symbol">₹</span>${priceNum}</span>
+                        <button class="add-btn" onclick="event.stopPropagation(); addToCart('${product.name}', '${v.name}', '${v.price}')">+</button>
+                    </div>`;
+                }).join('');
+
+                const variationsHtml = product.variations.map(v => `<span class="variation-tag">${v.name} — ${v.price}</span>`).join('');
+
+                const isBestSeller = bestSellerNames.includes(product.name);
+                const topBadge = (product.bestseller || isBestSeller) ? `<div class="top-badge"><i class="fas fa-crown"></i> TOP</div>` : '';
+
+                const whatsappText = encodeURIComponent(`Hi! 👋 I'd like to order ${product.name} (${product.variations[0].name} - ${product.variations[0].price}). Please confirm availability.`);
+                const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+                card.innerHTML = `
+                    <div class="card-face card-front">
+                        ${topBadge}
+                        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy" onerror="handleImageError(this, '${product.name}')">
+                        <div class="product-info">
+                            <div class="product-header">
+                                <div class="veg-icon">${leafSvg}</div>
+                                <h3 class="product-name">${product.name}</h3>
+                            </div>
+                        </div>
+                        <div class="price-grid">
+                            ${priceGridHtml}
+                        </div>
+                        <div class="price-list-mobile">
+                            ${priceListHtml}
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="back-content">
+                            <h3>${product.name}</h3>
+                            <p class="description">${product.description}</p>
+                            <div class="variations">
+                                <h4>All Prices & Variations:</h4>
+                                <div class="variation-tags">${variationsHtml}</div>
+                            </div>
+                        </div>
+                        <a href="${whatsappLink}" target="_blank" class="order-button"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function addToCart(productName, variationName, price) {
+            const msg = `Hi! 👋 I'd like to order ${productName} (${variationName} - ${price}). Please confirm availability.`;
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        function init() {
+            generateProductCards('bestsellers', 'bestsellers-grid');
+            generateProductCards('spicypowders', 'spicypowders-grid');
+            generateProductCards('instantrice', 'instantrice-grid');
+            generateProductCards('masalapowders', 'masalapowders-grid');
+            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 600);
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+            const sections = document.querySelectorAll('.category-section, .hero');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+            window.addEventListener('scroll', () => {
+                let current = 'hero';
+                sections.forEach(section => { 
+                    if (window.scrollY >= section.offsetTop - 150) current = section.getAttribute('id'); 
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-section') === current) link.classList.add('active');
+                });
+
+                mobileNavItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('data-section') === current) item.classList.add('active');
+                });
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+
+            mobileNavItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    mobileNavItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight - 10;
+                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                const card = e.target.closest('.product-card');
+                if (card && window.innerWidth <= 768 && !e.target.closest('.order-button') && !e.target.closest('.price-row') && !e.target.closest('.add-btn')) {
+                    document.querySelectorAll('.product-card.flipped').forEach(c => { if (c !== card) c.classList.remove('flipped'); });
+                    card.classList.toggle('flipped');
+                }
+            });
+
+            initCometSystem();
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
