@@ -454,7 +454,7 @@
 
         .product-card {
             width: 100%;
-            height: 440px;
+            height: 560px;
             position: relative;
             transform-style: preserve-3d;
             transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -488,9 +488,11 @@
 
         .product-image { 
             width: 100%; 
-            height: 260px; 
-            object-fit: cover; 
+            height: 420px;
+            object-fit: contain;
+            object-position: center;
             flex-shrink: 0;
+            background: var(--white);
         }
 
         .top-badge {
@@ -516,9 +518,9 @@
         .product-info { 
             display: flex; 
             align-items: center;
-            padding: 12px 12px 8px;
+            padding: 10px 12px 6px;
             flex-shrink: 0;
-            height: 50px;
+            height: 45px;
         }
 
         .product-header { 
@@ -553,10 +555,11 @@
         .price-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 6px;
+            gap: 5px;
             padding: 0 8px 8px;
             box-sizing: border-box;
             flex: 1;
+            align-content: start;
         }
 
         .price-grid .price-item {
@@ -566,8 +569,8 @@
             justify-content: center;
             background: linear-gradient(145deg, #f0f7ec 0%, #e6f0e0 100%);
             border: 1.5px solid var(--green);
-            border-radius: 16px;
-            padding: 8px 4px;
+            border-radius: 12px;
+            padding: 6px 3px;
             transition: var(--transition);
             cursor: pointer;
             position: relative;
@@ -582,9 +585,9 @@
         }
 
         .price-item .leaf-icon {
-            width: 14px;
-            height: 14px;
-            margin-bottom: 2px;
+            width: 12px;
+            height: 12px;
+            margin-bottom: 1px;
             flex-shrink: 0;
         }
 
@@ -595,20 +598,20 @@
 
         .price-item .price-amount {
             font-family: 'Playfair Display', serif;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 800;
             color: var(--green-dark);
             line-height: 1.1;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .price-item .price-amount .rupee-symbol {
-            font-size: 0.75rem;
+            font-size: 0.68rem;
             font-weight: 700;
         }
 
         .price-item .variation-name {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-weight: 500;
             color: var(--green);
             white-space: nowrap;
@@ -623,6 +626,7 @@
             display: none;
         }
 
+        /* ===== CRITICAL FIX: Override ALL height constraints on mobile ===== */
         @media (max-width: 768px) {
             header { position: relative; }
 
@@ -721,28 +725,54 @@
             }
 
             .product-grid { 
-                grid-template-columns: 1fr; 
-                max-width: 340px; 
-                margin: 0 auto; 
+                grid-template-columns: 1fr !important;
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 0 1rem;
+            }
+
+            /* ===== FIX: Override ALL card elements to remove height constraints ===== */
+            .product-card,
+            .product-card .card-face,
+            .product-card .card-front,
+            .product-card .card-back {
+                height: auto !important;
+                min-height: 0 !important;
+                max-height: none !important;
             }
 
             .product-card {
-                height: 500px;
-                transition: height 0.3s ease;
-                overflow: visible;
+                transform-style: flat !important;
+                overflow: visible !important;
+                position: relative;
+                margin-bottom: 0;
+                display: block !important;
             }
 
-            .product-card.expanded {
-                height: auto;
+            .card-face {
+                position: relative !important;
+                overflow: visible;
+                display: block !important;
+            }
+
+            .card-front {
+                display: block !important;
+            }
+
+            .card-back {
+                display: none !important;
             }
 
             .product-image {
-                height: 400px;
+                height: 380px;
+                object-fit: contain;
+                object-position: center;
+                background: var(--white);
             }
 
             .product-info {
-                height: 50px;
-                padding: 10px 12px;
+                height: 45px;
+                padding: 10px 12px 6px;
             }
 
             .price-grid {
@@ -750,7 +780,7 @@
             }
 
             .mobile-footer {
-                display: flex;
+                display: flex !important;
                 height: 50px;
                 justify-content: space-between;
                 align-items: center;
@@ -771,14 +801,14 @@
                 background: var(--green);
                 color: var(--white);
                 border: none;
-                padding: 6px 12px;
-                border-radius: 15px;
-                font-size: 0.7rem;
+                padding: 8px 14px;
+                border-radius: 20px;
+                font-size: 0.75rem;
                 font-weight: 600;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
-                gap: 5px;
+                gap: 6px;
                 transition: var(--transition);
             }
 
@@ -788,6 +818,7 @@
 
             .view-prices-btn i {
                 transition: transform 0.3s ease;
+                font-size: 0.7rem;
             }
 
             .product-card.expanded .view-prices-btn i {
@@ -796,15 +827,16 @@
 
             .mobile-price-details {
                 display: none;
-                padding: 10px 12px 15px;
+                padding: 8px 12px 0;
                 background: var(--white);
-                flex-direction: column;
-                gap: 8px;
                 border-top: 1px solid #f0f0f0;
+                border-radius: 0 0 16px 16px;
+                margin-bottom: 0;
             }
 
             .product-card.expanded .mobile-price-details {
-                display: flex;
+                display: block !important;
+                padding-bottom: 12px;
             }
 
             .comet-dock { bottom: 80px; left: 15px; }
@@ -823,84 +855,45 @@
             .footer-logo img { height: 60px; }
         }
 
+        /* ===== NEW: Mobile price list with clean divider lines ===== */
         .price-list-mobile .price-row {
-            display: flex;
+            display: grid !important;
+            grid-template-columns: 80px 1fr auto;
             align-items: center;
-            justify-content: space-between;
-            background: linear-gradient(145deg, #f0f7ec 0%, #e6f0e0 100%);
-            border: 1.2px solid var(--green);
-            border-radius: 12px;
-            padding: 8px 10px;
-            flex-shrink: 0;
-            min-height: 40px;
-            transition: var(--transition);
+            gap: 8px;
+            padding: 12px 14px;
+            border-bottom: 1px solid #e8e8e8;
+            cursor: default;
         }
 
-        .price-list-mobile .price-row:hover {
-            background: linear-gradient(145deg, #e6f0e0 0%, #d8e8d0 100%);
-        }
-
-        .price-row .row-left {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex: 1;
-            min-width: 0;
-        }
-
-        .price-row .row-leaf {
-            width: 12px;
-            height: 12px;
-            flex-shrink: 0;
-        }
-
-        .price-row .row-leaf svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .price-row .row-name {
-            font-size: 0.7rem;
-            font-weight: 500;
-            color: var(--green);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .price-list-mobile .price-row:last-child {
+            border-bottom: none;
         }
 
         .price-row .row-price {
             font-family: 'Playfair Display', serif;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             font-weight: 800;
             color: var(--green-dark);
-            margin-right: 8px;
-            white-space: nowrap;
+            text-align: left;
         }
 
         .price-row .row-price .rupee-symbol {
-            font-size: 0.65rem;
+            font-size: 0.75rem;
         }
 
-        .price-row .add-btn {
-            width: 26px;
-            height: 26px;
-            background: var(--green);
-            color: var(--white);
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            font-weight: 700;
-            cursor: pointer;
-            flex-shrink: 0;
-            transition: var(--transition);
+        .price-row .row-for {
+            font-style: italic;
+            color: #999;
+            font-size: 0.85rem;
+            text-align: center;
         }
 
-        .price-row .add-btn:hover {
-            background: var(--green-dark);
-            transform: scale(1.1);
+        .price-row .row-name {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--green);
+            text-align: right;
         }
 
         .back-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--green); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--yellow-light); }
@@ -1202,7 +1195,7 @@
 
         const spicyRicePricing = [
             { name: "100 gms", price: "₹100" },
-            { name: "200 gms", price: "₹200" },
+            { name: "200 gms", price: "200" },
             { name: "250 gms", price: "₹250" },
             { name: "500 gms", price: "₹500" },
             { name: "1 kg", price: "₹1000" }
@@ -1216,7 +1209,6 @@
             { name: "1 kg", price: "₹700" }
         ];
 
-        // UPDATED: Image path function to match your GitHub folder structure
         const imgPath = (category, num) => {
             const categoryMap = {
                 'spicy': 'spicy',
@@ -1226,7 +1218,6 @@
             return `images/images:${categoryMap[category]}/${num}.jpg`;
         };
 
-        // UPDATED: Fallback images with raw GitHub URLs
         const fallbackImages = {
             'Idly Karam Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/1.jpg',
             'Karivepaku Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/2.jpg',
@@ -1409,15 +1400,13 @@
                     </div>`;
                 }).join('');
 
+                // NEW: Mobile price list with format "₹100 for 100 gms"
                 const priceListHtml = product.variations.map((v, i) => {
                     const priceNum = v.price.replace(/[^\d]/g, '');
                     return `<div class="price-row">
-                        <div class="row-left">
-                            <div class="row-leaf">${leafSvg}</div>
-                            <span class="row-name">${v.name}</span>
-                        </div>
                         <span class="row-price"><span class="rupee-symbol">₹</span>${priceNum}</span>
-                        <button class="add-btn" onclick="event.stopPropagation(); addToCart('${product.name}', '${v.name}', '${v.price}')">+</button>
+                        <span class="row-for">for</span>
+                        <span class="row-name">${v.name}</span>
                     </div>`;
                 }).join('');
 
@@ -1449,7 +1438,7 @@
 
                         <div class="mobile-footer">
                             <span class="mobile-summary-text">${summaryText}</span>
-                            <button class="view-prices-btn" onclick="toggleExpand(event, this)">
+                            <button class="view-prices-btn" type="button" onclick="toggleExpand(event, this)">
                                 View Prices <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
@@ -1476,8 +1465,15 @@
 
         function toggleExpand(event, btn) {
             event.stopPropagation();
+            event.preventDefault();
             const card = btn.closest('.product-card');
-            card.classList.toggle('expanded');
+            if (card) {
+                const isExpanded = card.classList.contains('expanded');
+                document.querySelectorAll('.product-card.expanded').forEach(c => {
+                    if (c !== card) c.classList.remove('expanded');
+                });
+                card.classList.toggle('expanded');
+            }
         }
 
         function addToCart(productName, variationName, price) {
@@ -1544,7 +1540,7 @@
 
             document.addEventListener('click', function(e) {
                 const card = e.target.closest('.product-card');
-                if (card && window.innerWidth <= 768 && !e.target.closest('.view-prices-btn') && !e.target.closest('.price-row') && !e.target.closest('.add-btn')) {
+                if (card && window.innerWidth <= 768 && !e.target.closest('.view-prices-btn')) {
                     document.querySelectorAll('.product-card.flipped').forEach(c => { if (c !== card) c.classList.remove('flipped'); });
                     card.classList.toggle('flipped');
                 }
