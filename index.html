@@ -464,6 +464,8 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             background: var(--white);
             justify-self: center;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-card:hover { transform: rotateY(180deg); }
@@ -477,6 +479,8 @@
             border-radius: 16px;
             overflow: hidden;
             background: var(--white);
+            display: flex;
+            flex-direction: column;
         }
 
         .card-front { display: flex; flex-direction: column; }
@@ -514,6 +518,7 @@
             align-items: center;
             padding: 12px 12px 8px;
             flex-shrink: 0;
+            height: 50px;
         }
 
         .product-header { 
@@ -551,6 +556,7 @@
             gap: 6px;
             padding: 0 8px 8px;
             box-sizing: border-box;
+            flex: 1;
         }
 
         .price-grid .price-item {
@@ -560,7 +566,7 @@
             justify-content: center;
             background: linear-gradient(145deg, #f0f7ec 0%, #e6f0e0 100%);
             border: 1.5px solid var(--green);
-            border-radius: 10px;
+            border-radius: 16px;
             padding: 8px 4px;
             transition: var(--transition);
             cursor: pointer;
@@ -613,205 +619,8 @@
             text-align: center;
         }
 
-        .price-list-mobile {
+        .mobile-footer, .mobile-price-details {
             display: none;
-            flex-direction: column;
-            gap: 5px;
-            padding: 0 8px 8px;
-            box-sizing: border-box;
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: var(--green-light) transparent;
-        }
-
-        .price-list-mobile::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        .price-list-mobile::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .price-list-mobile::-webkit-scrollbar-thumb {
-            background: var(--green-light);
-            border-radius: 4px;
-        }
-
-        .price-list-mobile .price-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: linear-gradient(145deg, #f0f7ec 0%, #e6f0e0 100%);
-            border: 1.2px solid var(--green);
-            border-radius: 8px;
-            padding: 6px 8px;
-            flex-shrink: 0;
-            min-height: 34px;
-            transition: var(--transition);
-        }
-
-        .price-list-mobile .price-row:hover {
-            background: linear-gradient(145deg, #e6f0e0 0%, #d8e8d0 100%);
-        }
-
-        .price-row .row-left {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex: 1;
-            min-width: 0;
-        }
-
-        .price-row .row-leaf {
-            width: 12px;
-            height: 12px;
-            flex-shrink: 0;
-        }
-
-        .price-row .row-leaf svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .price-row .row-name {
-            font-size: 0.65rem;
-            font-weight: 500;
-            color: var(--green);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .price-row .row-price {
-            font-family: 'Playfair Display', serif;
-            font-size: 0.78rem;
-            font-weight: 800;
-            color: var(--green-dark);
-            margin-right: 8px;
-            white-space: nowrap;
-        }
-
-        .price-row .row-price .rupee-symbol {
-            font-size: 0.62rem;
-        }
-
-        .price-row .add-btn {
-            width: 24px;
-            height: 24px;
-            background: var(--green);
-            color: var(--white);
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            cursor: pointer;
-            flex-shrink: 0;
-            transition: var(--transition);
-        }
-
-        .price-row .add-btn:hover {
-            background: var(--green-dark);
-            transform: scale(1.1);
-        }
-
-        .back-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--green); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--yellow-light); }
-        .description { color: var(--text-light); line-height: 1.6; margin-bottom: 1rem; font-size: 0.9rem; }
-        .variations { margin-bottom: 1rem; }
-        .variations h4 { color: var(--brown); margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 600; }
-
-        .variation-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-        .variation-tag {
-            background: var(--yellow-pale); padding: 0.25rem 0.7rem; border-radius: 15px;
-            font-size: 0.8rem; color: var(--brown); border: 1px solid var(--yellow-light); transition: var(--transition);
-        }
-        .variation-tag:hover { background: var(--yellow); color: var(--white); }
-
-        .order-button {
-            width: 100%; padding: 0.8rem; background: #25d366; color: var(--white); border: none;
-            border-radius: 10px; font-size: 0.95rem; font-weight: 600; cursor: pointer;
-            display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: var(--transition); text-decoration: none;
-        }
-        .order-button:hover { background: #128c7e; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
-
-        .whatsapp-float {
-            position: fixed; bottom: 85px; right: 25px; width: 55px; height: 55px;
-            background: #25d366; color: var(--white); border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; font-size: 1.8rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); cursor: pointer; z-index: 999;
-            transition: var(--transition); text-decoration: none; animation: pulse 2s infinite;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6); }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        footer {
-            background: var(--green);
-            color: var(--white);
-            padding: 3rem 2rem 2rem;
-        }
-
-        .footer-content {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .footer-logo {
-            flex-shrink: 0;
-            background: var(--white);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .footer-logo img {
-            height: 80px;
-            width: auto;
-            object-fit: contain;
-            display: block;
-        }
-
-        .footer-text { flex: 1; }
-
-        .footer-brand {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            color: var(--yellow);
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin: 0.4rem 0;
-        }
-
-        .footer-divider {
-            width: 100%;
-            max-width: 1200px;
-            margin: 1.5rem auto 0;
-            height: 1px;
-            background: rgba(255,255,255,0.2);
-        }
-
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-        @media (max-width: 1200px) {
-            .product-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-
-        @media (max-width: 900px) {
-            .product-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -918,12 +727,85 @@
             }
 
             .product-card {
-                max-width: 340px;
-                height: 440px;
+                height: 500px;
+                transition: height 0.3s ease;
+                overflow: visible;
             }
 
-            .price-grid { display: none; }
-            .price-list-mobile { display: flex; }
+            .product-card.expanded {
+                height: auto;
+            }
+
+            .product-image {
+                height: 400px;
+            }
+
+            .product-info {
+                height: 50px;
+                padding: 10px 12px;
+            }
+
+            .price-grid {
+                display: none !important;
+            }
+
+            .mobile-footer {
+                display: flex;
+                height: 50px;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 12px;
+                box-sizing: border-box;
+                background: var(--white);
+                border-top: 1px solid #f0f0f0;
+            }
+
+            .mobile-summary-text {
+                font-family: 'Playfair Display', serif;
+                font-size: 0.85rem;
+                font-weight: 700;
+                color: var(--green-dark);
+            }
+
+            .view-prices-btn {
+                background: var(--green);
+                color: var(--white);
+                border: none;
+                padding: 6px 12px;
+                border-radius: 15px;
+                font-size: 0.7rem;
+                font-weight: 600;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                transition: var(--transition);
+            }
+
+            .view-prices-btn:hover {
+                background: var(--green-dark);
+            }
+
+            .view-prices-btn i {
+                transition: transform 0.3s ease;
+            }
+
+            .product-card.expanded .view-prices-btn i {
+                transform: rotate(180deg);
+            }
+
+            .mobile-price-details {
+                display: none;
+                padding: 10px 12px 15px;
+                background: var(--white);
+                flex-direction: column;
+                gap: 8px;
+                border-top: 1px solid #f0f0f0;
+            }
+
+            .product-card.expanded .mobile-price-details {
+                display: flex;
+            }
 
             .comet-dock { bottom: 80px; left: 15px; }
             .comet-popup { width: 220px; height: 220px; }
@@ -939,6 +821,183 @@
             }
 
             .footer-logo img { height: 60px; }
+        }
+
+        .price-list-mobile .price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(145deg, #f0f7ec 0%, #e6f0e0 100%);
+            border: 1.2px solid var(--green);
+            border-radius: 12px;
+            padding: 8px 10px;
+            flex-shrink: 0;
+            min-height: 40px;
+            transition: var(--transition);
+        }
+
+        .price-list-mobile .price-row:hover {
+            background: linear-gradient(145deg, #e6f0e0 0%, #d8e8d0 100%);
+        }
+
+        .price-row .row-left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .price-row .row-leaf {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+        }
+
+        .price-row .row-leaf svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .price-row .row-name {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--green);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .price-row .row-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--green-dark);
+            margin-right: 8px;
+            white-space: nowrap;
+        }
+
+        .price-row .row-price .rupee-symbol {
+            font-size: 0.65rem;
+        }
+
+        .price-row .add-btn {
+            width: 26px;
+            height: 26px;
+            background: var(--green);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .price-row .add-btn:hover {
+            background: var(--green-dark);
+            transform: scale(1.1);
+        }
+
+        .back-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--green); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--yellow-light); }
+        .description { color: var(--text-light); line-height: 1.6; margin-bottom: 1rem; font-size: 0.9rem; }
+        .variations { margin-bottom: 1rem; }
+        .variations h4 { color: var(--brown); margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 600; }
+
+        .variation-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .variation-tag {
+            background: var(--yellow-pale); padding: 0.25rem 0.7rem; border-radius: 15px;
+            font-size: 0.8rem; color: var(--brown); border: 1px solid var(--yellow-light); transition: var(--transition);
+        }
+        .variation-tag:hover { background: var(--yellow); color: var(--white); }
+
+        .order-button {
+            width: 100%; padding: 0.8rem; background: #25d366; color: var(--white); border: none;
+            border-radius: 10px; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: var(--transition); text-decoration: none;
+        }
+        .order-button:hover { background: #128c7e; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); }
+
+        .whatsapp-float {
+            position: fixed; bottom: 85px; right: 25px; width: 55px; height: 55px;
+            background: #25d366; color: var(--white); border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); cursor: pointer; z-index: 999;
+            transition: var(--transition); text-decoration: none; animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6); }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        footer {
+            background: var(--green);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .footer-logo {
+            flex-shrink: 0;
+            background: var(--white);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer-text { flex: 1; }
+
+        .footer-brand {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--yellow);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0.4rem 0;
+        }
+
+        .footer-divider {
+            width: 100%;
+            max-width: 1200px;
+            margin: 1.5rem auto 0;
+            height: 1px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 1200px) {
+            .product-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 900px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 480px) {
@@ -1151,28 +1210,36 @@
 
         const masalaPricing = [
             { name: "100 gms", price: "₹90" },
-            { name: "200 gms", price: "₹180" },
+            { name: "200 gms", price: "180" },
             { name: "250 gms", price: "₹220" },
             { name: "500 gms", price: "₹350" },
             { name: "1 kg", price: "₹700" }
         ];
 
-        // Fallback images for each product
-        const fallbackImages = {
-            'Idly Karam Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
-            'Karivepaku Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
-            'Kothimeera Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
-            'Vellulli Karam Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
-            'Munagaaku Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
-            'Chutnee Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
-            'Kandi Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
-            'Pudeena Podi': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400',
-            'Pulihora Mix': 'https://github.com/zetaacraft-prog/abr/blob/main/images/images%3Arice%3A1.jpg',
-            'Rasam Podi': 'https://github.com/zetaacraft-prog/abr/blob/main/images/images%3Amasala%3A1.jpg',
-            'Sambar Podi': 'https://github.com/zetaacraft-prog/abr/blob/main/images/images%3Amasala%3A2.jpg'
+        // UPDATED: Image path function to match your GitHub folder structure
+        const imgPath = (category, num) => {
+            const categoryMap = {
+                'spicy': 'spicy',
+                'rice': 'rice',
+                'masala': 'masala'
+            };
+            return `images/images:${categoryMap[category]}/${num}.jpg`;
         };
 
-        const imgPath = (folder, num) => `images/${folder}/${num}.jpg`;
+        // UPDATED: Fallback images with raw GitHub URLs
+        const fallbackImages = {
+            'Idly Karam Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/1.jpg',
+            'Karivepaku Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/2.jpg',
+            'Kothimeera Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/3.jpg',
+            'Vellulli Karam Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/4.jpg',
+            'Munagaaku Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/5.jpg',
+            'Chutnee Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/6.jpg',
+            'Kandi Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/7.jpg',
+            'Pudeena Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/8.jpg',
+            'Pulihora Mix': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:rice/1.jpg',
+            'Rasam Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:masala/1.jpg',
+            'Sambar Podi': 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:masala/2.jpg'
+        };
 
         const allSpicyProducts = [
             { name: "Idly Karam Podi", image: imgPath('spicy', 1), description: "Spicy idli chutney powder (gunpowder) made with red chilies, garlic, and lentils. Perfect with hot idlis and ghee.", variations: [...spicyRicePricing], isVeg: true },
@@ -1318,7 +1385,7 @@
         });
 
         function handleImageError(img, productName) {
-            const fallback = fallbackImages[productName] || 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400';
+            const fallback = fallbackImages[productName] || 'https://raw.githubusercontent.com/zetaacraft-prog/abr/main/images/images:spicy/1.jpg';
             if (img.src !== fallback) {
                 img.src = fallback;
             }
@@ -1359,6 +1426,9 @@
                 const isBestSeller = bestSellerNames.includes(product.name);
                 const topBadge = (product.bestseller || isBestSeller) ? `<div class="top-badge"><i class="fas fa-crown"></i> TOP</div>` : '';
 
+                const firstVar = product.variations[0];
+                const summaryText = `${firstVar.price} per ${firstVar.name}`;
+
                 const whatsappText = encodeURIComponent(`Hi! 👋 I'd like to order ${product.name} (${product.variations[0].name} - ${product.variations[0].price}). Please confirm availability.`);
                 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 
@@ -1372,10 +1442,19 @@
                                 <h3 class="product-name">${product.name}</h3>
                             </div>
                         </div>
+                        
                         <div class="price-grid">
                             ${priceGridHtml}
                         </div>
-                        <div class="price-list-mobile">
+
+                        <div class="mobile-footer">
+                            <span class="mobile-summary-text">${summaryText}</span>
+                            <button class="view-prices-btn" onclick="toggleExpand(event, this)">
+                                View Prices <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="mobile-price-details">
                             ${priceListHtml}
                         </div>
                     </div>
@@ -1393,6 +1472,12 @@
                 `;
                 container.appendChild(card);
             });
+        }
+
+        function toggleExpand(event, btn) {
+            event.stopPropagation();
+            const card = btn.closest('.product-card');
+            card.classList.toggle('expanded');
         }
 
         function addToCart(productName, variationName, price) {
@@ -1459,7 +1544,7 @@
 
             document.addEventListener('click', function(e) {
                 const card = e.target.closest('.product-card');
-                if (card && window.innerWidth <= 768 && !e.target.closest('.order-button') && !e.target.closest('.price-row') && !e.target.closest('.add-btn')) {
+                if (card && window.innerWidth <= 768 && !e.target.closest('.view-prices-btn') && !e.target.closest('.price-row') && !e.target.closest('.add-btn')) {
                     document.querySelectorAll('.product-card.flipped').forEach(c => { if (c !== card) c.classList.remove('flipped'); });
                     card.classList.toggle('flipped');
                 }
