@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aarya Brahmana Ruchulu - Authentic Home Food</title>
+    
+    <!-- CHANGE 3: Added Logo as Favicon -->
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1R80dx1FbkKw1fWAZpszGw5_0_wENSWp1=w400">
+    <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1R80dx1FbkKw1fWAZpszGw5_0_wENSWp1=w400">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -509,7 +514,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* NEW BADGE STYLING */
         .top-badge.new-badge {
             background: linear-gradient(135deg, var(--green), var(--green-dark)) !important;
             box-shadow: 0 2px 8px rgba(74, 107, 58, 0.4) !important;
@@ -629,7 +633,12 @@
         }
 
         @media (max-width: 768px) {
-            header { position: relative; }
+            /* CHANGE 1: Made header sticky in mobile view */
+            header { 
+                position: sticky; 
+                top: 0; 
+                z-index: 1000; 
+            }
 
             .header-top { 
                 height: auto;
@@ -1169,6 +1178,12 @@
                 <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.95;">
                     <i class="fab fa-whatsapp"></i> +91 85199 10385
                 </p>
+                <!-- CHANGE 2: Added Instagram Link -->
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.95;">
+                    <a href="https://www.instagram.com/aarya_brahmana_ruchulu/" target="_blank" style="color: var(--white); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
+                        <i class="fab fa-instagram"></i> @aarya_brahmana_ruchulu
+                    </a>
+                </p>
             </div>
         </div>
         <div class="footer-divider"></div>
@@ -1232,12 +1247,32 @@
             { name: "Pudeena Podi", image: imgPath('spicy', 8), description: "Mint leaves powder with chilies and spices. Refreshing and flavorful — great with rice and curd.", variations: [...spicyRicePricing], isVeg: true }
         ];
 
-        // --- UPDATED: Added 3 new products with isNew: true flag and new names ---
         const allRiceProducts = [
             { name: "Pulihora Mix", image: imgPath('rice', 1), description: "Instant tamarind rice mix with traditional spices. Just add cooked rice and oil — ready in 5 minutes!", variations: [...spicyRicePricing], isVeg: true },
-            { name: "Karivepaku Rice Mix", image: imgPath('rice', 2), description: "Aromatic curry leaves rice mix with lentils and spices. A healthy, flavorful, and quick meal.", variations: [...spicyRicePricing], isVeg: true, isNew: true },
-            { name: "Tomato Rice Mix", image: imgPath('rice', 3), description: "Rich and tangy instant tomato rice blend with aromatic spices and dried tomatoes. Ready in minutes.", variations: [...spicyRicePricing], isVeg: true, isNew: true },
-            { name: "Pudeena Rice Mix", image: imgPath('rice', 4), description: "Refreshing mint rice mix with fresh pudina leaves, green chilies, and mild spices. Quick and flavorful.", variations: [...spicyRicePricing], isVeg: true, isNew: true }
+            { 
+                name: "Karivepaku Rice Mix", 
+                image: imgPath('rice', 2), 
+                description: "Aromatic curry leaves (Karivepaku) instant rice mix made in the traditional way using organic products. A healthy, flavorful, and quick meal — pure taste of tradition!", 
+                variations: [...spicyRicePricing], 
+                isVeg: true, 
+                isNew: true 
+            },
+            { 
+                name: "Tomato Rice Mix", 
+                image: imgPath('rice', 3), 
+                description: "Tangy and flavorful tomato (Tomato) instant rice mix made in the traditional way using organic products. Rich, aromatic, and ready in minutes — pure taste of tradition!", 
+                variations: [...spicyRicePricing], 
+                isVeg: true, 
+                isNew: true 
+            },
+            { 
+                name: "Pudeena Rice Mix", 
+                image: imgPath('rice', 4), 
+                description: "Refreshing mint (Pudina) instant rice mix — no preservatives, 100% natural, authentic taste, homemade with care. A quick and flavorful meal made in the traditional way!", 
+                variations: [...spicyRicePricing], 
+                isVeg: true, 
+                isNew: true 
+            }
         ];
 
         const allMasalaProducts = [
@@ -1405,7 +1440,6 @@
 
                 const isBestSeller = bestSellerNames.includes(product.name);
                 
-                // --- UPDATED: Logic to show either TOP or NEW badge ---
                 let topBadge = '';
                 if (product.bestseller || isBestSeller) {
                     topBadge = `<div class="top-badge"><i class="fas fa-crown"></i> TOP</div>`;
